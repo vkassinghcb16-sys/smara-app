@@ -4,7 +4,6 @@ import { EmptyState } from '../components/EmptyState';
 import { ALL_LOCATIONS, LOCATION_META } from '../types';
 import type { BuyLocation, Item } from '../types';
 import { groupByCategory } from '../lib/group';
-import { greeting } from '../lib/format';
 
 interface Props {
   onOpenItem: (item: Item) => void;
@@ -25,13 +24,10 @@ export function BuyPage({ onOpenItem, onImHere, onAdd }: Props) {
     <div>
       <header className="page-header">
         <div className="brand-row">
-          <img src="/icons/icon-192.png" alt="" className="brand-mark" />
+          <img src="/icons/favicon-32.png" alt="" className="brand-mark" />
           <h1 className="page-title">Smara</h1>
         </div>
         <p className="page-subtitle">Remember it. Get it later.</p>
-        <p className="page-subtitle-count">
-          {greeting()} — {buyItems.length} {buyItems.length === 1 ? 'thing' : 'things'} on your mind
-        </p>
       </header>
 
       <button className="im-here-btn" onClick={onImHere}>
